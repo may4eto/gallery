@@ -1,0 +1,129 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.06rem;
+    color: #A9A9A9
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #4E5150;
+    margin: 0;
+}
+
+.container {
+    margin: 60px auto 60px auto;
+    max-width: 960px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.profile img {
+    max-height: 156px;
+    max-width: auto;
+    border-radius: 16px;
+    margin-bottom: 16px
+}
+
+.profile p {
+    margin: 8px 0 24px 0 !important;
+}
+
+.profile .cards {
+    display: flex;
+    align-items: center;
+}
+
+.profile .card {
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    height: 67px;
+    width: 100px;
+    padding: 15px 25px;
+    margin: 0 12px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile span {
+    display: block;
+    text-align: center;
+}
+
+.profile span:first-child {
+    color: #4E5150;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(300));
+    gap: 3.5%;
+    margin-bottom: 100px;
+    max-width: 960px;
+}
+
+.gallery img {
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 16px 12px -12px rgba(196,196,196,1);
+}
+
+.gallery .small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.gallery .large-vertical {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.gallery .large-horizontal {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+footer p {
+    text-align: center;
+}
+
+@media (max-width: 1040px) {
+    .container {
+        margin: 60px 24px 60px 24px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        margin: 30px 12px 30px 12px;
+    }
+    .profile {
+        margin-bottom: 40px;
+    }
+    .profile .card {
+        width: 78px;
+        height: 52px;
+    }
+}
+
+@media (max-width: 475px) {
+    .profile .card {
+        width: 56px;
+        height: 36px;
+        margin: 0 8px 0 8px;
+    }
+}
