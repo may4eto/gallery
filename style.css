@@ -72,6 +72,7 @@ h1 {
     gap: 3.5%;
     margin-bottom: 100px;
     max-width: 960px;
+    height:100%;
 }
 
 .gallery img {
