@@ -118,6 +118,9 @@ footer p {
         width: 78px;
         height: 52px;
     }
+    .gallery {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 475px) {
