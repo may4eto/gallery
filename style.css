@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
@@ -18,10 +25,19 @@ h1 {
 }
 
 .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 64px;
 }
 
@@ -37,8 +53,12 @@ h1 {
 }
 
 .profile .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .profile .card {
@@ -48,9 +68,15 @@ h1 {
     width: 100px;
     padding: 15px 25px;
     margin: 0 12px 0 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .profile span {
@@ -66,8 +92,11 @@ h1 {
 }
 
 .gallery {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3.5% 1fr 3.5% 1fr;
     grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: minmax(300) 3.5% minmax(300) 3.5% minmax(300);
     grid-template-rows: repeat(3, minmax(300));
     gap: 3.5%;
     margin-bottom: 100px;
@@ -75,26 +104,78 @@ h1 {
     height:100%;
 }
 
+.gallery > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.gallery > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.gallery > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+.gallery > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+}
+
+.gallery > *:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+}
+
+.gallery > *:nth-child(6) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+}
+
+.gallery > *:nth-child(7) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+}
+
+.gallery > *:nth-child(8) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+}
+
+.gallery > *:nth-child(9) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+}
+
 .gallery img {
     display: block;
     border-radius: 12px;
     width: 100%;
     height: 100%;
-    box-shadow: 0px 16px 12px -12px rgba(196,196,196,1);
+    -webkit-box-shadow: 0px 16px 12px -12px rgba(196,196,196,1);
+            box-shadow: 0px 16px 12px -12px rgba(196,196,196,1);
 }
 
 .gallery .small {
+    -ms-grid-column-span: 1;
     grid-column: span 1;
+    -ms-grid-row-span: 1;
     grid-row: span 1;
 }
 
 .gallery .large-vertical {
+    -ms-grid-column-span: 1;
     grid-column: span 1;
+    -ms-grid-row-span: 2;
     grid-row: span 2;
 }
 
 .gallery .large-horizontal {
+    -ms-grid-column-span: 2;
     grid-column: span 2;
+    -ms-grid-row-span: 1;
     grid-row: span 1;
 }
 
